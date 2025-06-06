@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY Multi-functional Robot Project</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Softer, light blue-gray background */
+            color: #2c3e50; /* Darker text for better contrast */
+            line-height: 1.7;
+            overflow-x: hidden; /* Prevent horizontal scroll on small devices */
+        }
+        .container-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem; /* Default padding for all sections */
+        }
+        @media (min-width: 768px) {
+            .container-section {
+                padding: 4rem 2rem; /* Larger padding for tablets and desktops */
+            }
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e9eff5;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3498db;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-br from-blue-600 to-indigo-700 text-white text-center py-20 px-6 sm:py-24 md:py-32 rounded-b-3xl shadow-xl">
+        <div class="container-section flex flex-col items-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight tracking-tight max-w-4xl">
+                Your Next Adventure: Build a Multi-functional Robot
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl font-light opacity-90 mb-10 max-w-3xl">
+                An affordable, versatile, and programmable robot system designed for enthusiasts and learners.
+            </p>
+            <a href="#overview" class="inline-block bg-white text-blue-700 hover:bg-blue-800 hover:text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105">
+                Discover the Project
+            </a>
+        </div>
+    </header>
+
+    <!-- Project Overview Section -->
+    <section id="overview" class="bg-white container-section rounded-2xl shadow-lg mt-8 mb-8 mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                    Embark on Your Robotics Journey
+                </h2>
+                <p class="text-base sm:text-lg text-gray-700 mb-6">
+                    This project guides you through building a powerful yet cost-effective DIY robot. Engineered for both dynamic mobility and practical liquid transfer capabilities, it offers an exceptional platform for mastering robotics, electronics, and fundamental programming skills.
+                </p>
+                <p class="text-base sm:text-lg text-gray-700">
+                    Constructed with readily available components, this robot highlights affordability and ease of assembly on a sturdy MDF wooden base. It's the perfect launchpad for aspiring roboticists and hobbyists, demonstrating that cutting-edge innovation is accessible to everyone.
+                </p>
+            </div>
+            <div class="flex justify-center items-center p-4">
+                <!-- Actual robot image from user's upload -->
+                <img src="https://raw.githubusercontent.com/SiddhardhaDev/Floor-Cleaner/main/ChatGPT%20Image%20Jun%206%2C%202025%2C%2009_53_15%20PM.png" alt="DIY Robot Main Design" class="rounded-xl shadow-2xl w-full max-w-md object-cover transform hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x450/6366f1/ffffff?text=DIY+Robot+Showcase';">
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="features" class="bg-gray-100 container-section rounded-2xl shadow-lg mt-8 mb-8 mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">
+            Unlock Its Potential: Key Features
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                <h3 class="text-xl font-bold text-blue-700 mb-3">🚀 4-Wheel Drive Mobility</h3>
+                <p class="text-gray-700 text-base">Equipped with four robust BO motors and wheels, offering versatile movement across various terrains for dynamic exploration.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                <h3 class="text-xl font-bold text-green-700 mb-3">🧠 Arduino Nano Intelligence</h3>
+                <p class="text-gray-700 text-base">Powered by the compact and efficient Arduino Nano V3.0, serving as the central brain for precise control and automation.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-purple-500 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                <h3 class="text-xl font-bold text-purple-700 mb-3">⚡️ Robust Power System</h3>
+                <p class="text-gray-700 text-base">Reliable power from a 18650 Li-ion battery, with safe and protected charging courtesy of the TP4056 module.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-orange-500 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                <h3 class="text-xl font-bold text-orange-700 mb-3">💧 Integrated Water Pump</h3>
+                <p class="text-gray-700 text-base">Features a mini submersible water pump, enabling small-scale liquid transfer for unique utility tasks and experiments.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-500 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1">
+                <h3 class="text-xl font-bold text-red-700 mb-3">🛠️ Sturdy MDF Construction</h3>
+                <p class="text-gray-700 text-base">Built on a durable MDF wooden base, ensuring stability and providing an excellent platform for future modifications and expansions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance & Insights Section -->
+    <section id="performance" class="bg-white container-section rounded-2xl shadow-lg mt-8 mb-8 mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">
+            Performance & Insights
+        </h2>
+        <div class="grid md:grid-cols-2 gap-10 text-gray-700">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm border-l-4 border-blue-400">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-3">Mobility & Agility</h3>
+                <p class="mb-3 text-base">
+                    The four BO motors provide robust power for navigating various flat surfaces, making the robot ideal for indoor environments and light outdoor use. Its design allows for effective movement and navigation.
+                </p>
+                <p class="text-base">
+                    <span class="font-medium text-blue-700">Maneuverability:</span> Achieved through basic differential steering, allowing for precise turns and pivots to navigate obstacles effectively.
+                </p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm border-l-4 border-green-400">
+                <h3 class="text-2xl font-semibold text-green-600 mb-3">Power & Endurance</h3>
+                <p class="mb-3 text-base">
+                    The $2600mAh$ 18650 Li-ion battery ensures extended operational periods for prolonged use.
+                </p>
+                <p class="mb-1 text-base">
+                    <span class="font-medium text-green-700">Battery Life:</span> Estimated $3-4$ hours under typical continuous movement, adjustable based on load and usage patterns.
+                </p>
+                <p class="mb-1 text-base">
+                    <span class="font-medium text-green-700">Safe Charging:</span> The TP4056 module provides vital overcharge/discharge protection, enhancing battery longevity and ensuring safe operation.
+                </p>
+                <p class="text-base">
+                    <span class="font-medium text-green-700">Stable Power:</span> The MT3608 boost converter efficiently delivers a consistent $5V$, crucial for stable electronic component operation and preventing voltage fluctuations.
+                </p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm border-l-4 border-purple-400">
+                <h3 class="text-2xl font-semibold text-purple-600 mb-3">Water Pump Utility</h3>
+                <p class="mb-3 text-base">
+                    The integrated mini submersible pump adds a unique dimension, enabling the robot to perform small-scale liquid transfer tasks for various applications.
+                </p>
+                <p class="text-base">
+                    <span class="font-medium text-purple-700">Flow Rate:</span> Ideal for low-flow applications, typically ranging from $80-120$ Liters/Hour, suitable for demonstrations or micro-irrigation systems.
+                </p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm border-l-4 border-orange-400">
+                <h3 class="text-2xl font-semibold text-orange-600 mb-3">Expandability & Learning</h3>
+                <p class="mb-3 text-base">
+                    The Arduino Nano offers a flexible environment for programming diverse robot behaviors, from simple remote control to more advanced autonomous functions.
+                </p>
+                <p class="text-base">
+                    <span class="font-medium text-orange-700">Modular Design:</span> The MDF base and component choices facilitate easy addition of new sensors (e.g., ultrasonic, IR) and communication modules (Bluetooth, Wi-Fi) for endless possibilities and future upgrades.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parts List & Cost Section -->
+    <section id="parts" class="bg-gray-100 container-section rounded-2xl shadow-lg mt-8 mb-8 mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">
+            Essential Components & Investment
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-2xl font-semibold text-blue-700 mb-6">🛒 From Amazon India</h3>
+                <div class="overflow-x-auto rounded-lg">
+                    <table class="min-w-full text-left">
+                        <thead>
+                            <tr class="bg-blue-100 text-blue-800 uppercase text-sm">
+                                <th class="py-3 px-4 rounded-tl-lg">Item</th>
+                                <th class="py-3 px-4">Qty</th>
+                                <th class="py-3 px-4 text-right">Price (₹)</th>
+                                <th class="py-3 px-4 rounded-tr-lg text-center">Link</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 text-base">
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">MDF Wooden Boards, 12" (2 pcs)</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹199</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://www.amazon.in/gp/product/B0DKJC9M4B/ref=ox_sc_act_title_3?smid=A1UUD7CBBVVXIG&psc=1" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">TP4056 C-Type Charging Module with BMS (2 pcs)</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹67</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://www.amazon.in/gp/product/B0CHB42XZR/ref=ox_sc_act_title_1?smid=A2AL6IVND0I91F&psc=1" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">BO Motors + Wheels (Pack of 4)</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹264</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://www.amazon.in/gp/product/B0BSC6HZVV/ref=ox_sc_act_title_2?smid=A366YFPXO3CTI5&th=1" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">Ultrasonic Sensor HC-SR04</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹109</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://www.amazon.in/gp/product/B0B5N57M79/ref=ewc_pr_img_1?smid=A1KANCVZSS8VMX&psc=1" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                             <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">Electronic Solder Tin Lead Solder Wire</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹95</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://www.amazon.in/Electronic-Solder-Tin-Lead-Solder-Wire/dp/B0BBSF5VXH/ref=sr_1_11?crid=3MINV73XSLIQ1&dib=eyJ2IjoiMSJ9.vK9PtWNc8tBDUBgzq1IWFmZMNdegvzZ4rrVFcusSyOLWSpehC-patlcWf0iVycsvxEyH381iGEsmHLPjWNaqkzpR0Lw76Q7tm-AS_u0SEVPlP9AGb-8D-mC7mri-8TL9fDE9K19AP7tjiMordx_1LKoegc8m3QEg5IWmM16J-3wzKpLRL2v_xWoCUwSPfOkeWFL-ZMA3qZGPYgG1kTA8_r_hG4K_DOMR7l_E_W00VyE37-hkFjBg2iDdyA3v--VC9Dqsvgb9SjsmZFlq2wY8ZIgdqan030Yo3br9IaVokOg.VhS6-bff6rX32MwsUP3-3dudsLTtteCAsulQ-bfhNC4&dib_tag=se&keywords=solder&qid=1749231341&s=industrial&sprefix=solde%2Cindustrial%2C228&sr=1-11" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-blue-50 text-blue-800 font-semibold">
+                                <td class="py-3 px-4" colspan="2">Amazon Subtotal</td>
+                                <td class="py-3 px-4 text-right">₹735</td>
+                                <td class="py-3 px-4 text-center"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-2xl font-semibold text-green-700 mb-6">🛒 From Robu.in</h3>
+                <div class="overflow-x-auto rounded-lg">
+                    <table class="min-w-full text-left">
+                        <thead>
+                            <tr class="bg-green-100 text-green-800 uppercase text-sm">
+                                <th class="py-3 px-4 rounded-tl-lg">Item</th>
+                                <th class="py-3 px-4">Qty</th>
+                                <th class="py-3 px-4 text-right">Price (₹)</th>
+                                <th class="py-3 px-4 rounded-tr-lg text-center">Link</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 text-base">
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">L293D Motor Driver Servo Shield for Arduino</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹118</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://robu.in/product/l293d-motor-driver-servo-shield-for-arduino/" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">DC 3–6V Submersible Water Pump</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹49</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://robu.in/product/dc-3-6-v-mini-micro-submersible-water-pump/" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">50cm Water Pump Pipe</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹44</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://robu.in/product/50cm-long-water-pump-pipe/" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">18650 Li-ion Battery (2600mAh)</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹140</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://robu.in/product/dmegc-inr18650-26e-3-7v-2600mah-li-ion-battery/" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">Arduino Nano V3.0 (CH340) with USB Cable</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹203.94</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://robu.in/product/arduino-nano-v3-0-ch340-chip-mini-usb-cable/" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">MT3608 Boost Converter</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹44</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://robu.in/product/mt3608-2a-max-dc-dc-step-up-power-module-booster-power-module/" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">Digital Multimeter (Basic LCD)</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹185</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://robu.in/product/digital-multimeter-small-yellow-color-lcd-ac-dc-measuring-voltage-current/" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="py-3 px-4">2x18650 Battery Holder (no cover)</td>
+                                <td class="py-3 px-4">1</td>
+                                <td class="py-3 px-4 text-right">₹26</td>
+                                <td class="py-3 px-4 text-center">
+                                    <a href="https://robu.in/product/2-x-18650-cell-box-without-cover/" target="_blank" class="text-blue-500 hover:underline text-sm">View</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-green-50 text-green-800 font-semibold">
+                                <td class="py-3 px-4" colspan="2">Robu.in Subtotal</td>
+                                <td class="py-3 px-4 text-right">₹809.94</td>
+                                <td class="py-3 px-4 text-center"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Cost Summary -->
+        <div class="mt-12 p-8 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-2xl shadow-xl flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div>
+                <h3 class="text-4xl font-extrabold mb-2">TOTAL PROJECT INVESTMENT</h3>
+                <p class="text-xl font-light opacity-90">(An incredibly efficient build, well under ₹1,800!)</p>
+            </div>
+            <p class="text-5xl font-extrabold mt-6 md:mt-0">₹1,544.94</p>
+        </div>
+    </section>
+
+    <!-- Under the Hood Section -->
+    <section id="how-it-works" class="bg-white container-section rounded-2xl shadow-lg mt-8 mb-8 mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">
+            Core Components in Action
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-6 rounded-lg shadow-md border-l-4 border-gray-400 bg-gray-50">
+                <h3 class="font-semibold text-xl text-gray-800 mb-2">Arduino Nano V3.0 (CH340)</h3>
+                <p class="text-gray-700 text-base">The compact brain, orchestrating motor movements, processing sensor data, and controlling the water pump with precision.</p>
+            </div>
+            <div class="p-6 rounded-lg shadow-md border-l-4 border-gray-400 bg-gray-50">
+                <h3 class="font-semibold text-xl text-gray-800 mb-2">L293D Motor Driver Servo Shield</h3>
+                <p class="text-gray-700 text-base">Acts as the interface between the Arduino and the motors. It safely allows the Arduino to control the speed and direction of the BO motors, providing the necessary current.</p>
+            </div>
+            <div class="p-6 rounded-lg shadow-md border-l-4 border-gray-400 bg-gray-50">
+                <h3 class="font-semibold text-xl text-gray-800 mb-2">18650 Li-ion Battery & TP4056</h3>
+                <p class="text-gray-700 text-base">The sustainable energy heart, providing long-lasting power, coupled with a charging module for safety and extended battery life.</p>
+            </div>
+            <div class="p-6 rounded-lg shadow-md border-l-4 border-gray-400 bg-gray-50">
+                <h3 class="font-semibold text-xl text-gray-800 mb-2">MT3608 Boost Converter</h3>
+                <p class="text-gray-700 text-base">Ensures a consistent and stable $5V$ power supply for the sensitive electronics, crucial for reliable operation.</p>
+            </div>
+            <div class="p-6 rounded-lg shadow-md border-l-4 border-gray-400 bg-gray-50">
+                <h3 class="font-semibold text-xl text-gray-800 mb-2">BO Motors + Wheels</h3>
+                <p class="text-gray-700 text-base">The robust locomotion system, delivering ample torque and enabling the robot to move effectively across various indoor and light outdoor surfaces.</p>
+            </div>
+            <div class="p-6 rounded-lg shadow-md border-l-4 border-gray-400 bg-gray-50">
+                <h3 class="font-semibold text-xl text-gray-800 mb-2">DC 3–6V Submersible Water Pump</h3>
+                <p class="text-gray-700 text-base">A versatile addition, allowing the robot to perform practical liquid transfer tasks for demonstrations or specific applications.</p>
+            </div>
+            <div class="p-6 rounded-lg shadow-md border-l-4 border-gray-400 bg-gray-50">
+                <h3 class="font-semibold text-xl text-gray-800 mb-2">HC-SR04 Ultrasonic Sensor</h3>
+                <p class="text-gray-700 text-base">This sensor can be integrated for distance measurement or obstacle detection, enhancing potential future autonomous capabilities.</p>
+            </div>
+             <div class="p-6 rounded-lg shadow-md border-l-4 border-gray-400 bg-gray-50">
+                <h3 class="font-semibold text-xl text-gray-800 mb-2">Solder Wire</h3>
+                <p class="text-gray-700 text-base">Essential for creating reliable electrical connections between components on the circuit board.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Circuit Diagrams Section -->
+    <section id="circuit-diagrams" class="bg-gray-100 container-section rounded-2xl shadow-lg mt-8 mb-8 mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">
+            Circuit Diagrams
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+            <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Overall Circuit Overview</h3>
+                <img src="https://raw.githubusercontent.com/SiddhardhaDev/Floor-Cleaner/main/OIP.jpg" alt="Overall Circuit Diagram" class="rounded-lg shadow-lg w-full h-auto max-w-lg object-contain transition-transform duration-300 hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/500x300/e2e8f0/2d3748?text=Circuit+Diagram+1';">
+                <p class="text-center text-gray-600 text-sm mt-4">A high-level view of the robot's electronic connections.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Arduino Nano & L293D Motor Driver</h3>
+                <img src="https://th.bing.com/th/id/OIP.eiLYx_9Tm42kYSZDbN1McQHaE2?rs=1&pid=ImgDetMain" alt="Arduino Nano L293D Motor Driver Diagram" class="rounded-lg shadow-lg w-full h-auto max-w-lg object-contain transition-transform duration-300 hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/500x300/e2e8f0/2d3748?text=Circuit+Diagram+2';">
+                <p class="text-center text-gray-600 text-sm mt-4">Detailed wiring for motor control using the L293D module.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="text-center text-gray-600 text-base py-8 bg-gray-200 rounded-t-3xl shadow-inner">
+        <p>Built with passion for learning and innovation.</p>
+    </footer>
+</body>
+</html>
